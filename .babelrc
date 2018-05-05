@@ -1,0 +1,33 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
+    ],
+    [
+      "inline-import",
+      {
+        "extensions": [".css"]
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "styles": "./styles"
+        },
+        "cwd": "babelrc"
+      }
+    ],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["less$"]
+      }
+    ],
+    ["import", { "libraryName": "antd" }]
+  ],
+  "ignore": []
+}
